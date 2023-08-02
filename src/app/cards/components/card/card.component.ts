@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Card } from '../../models/Card.model';
+import { Article } from '../../../shared/models/Article.model';
 
 @Component({
   selector: 'app-card',
@@ -8,5 +8,5 @@ import { Card } from '../../models/Card.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  @Input() card!: Card;
+  @Input() card!: Article;
 }

@@ -1,7 +1,7 @@
 <div class="wrapper">
-  <p class="mat-h3">Result: {{(cards$ | async)?.length}}</p>
+  <p class="mat-h3">Result: {{(articles | async)?.length}}</p>
   <mat-divider></mat-divider>
   <div class="card-container">
-    <app-card *ngFor="let card of cards$ | async" [card]="card"></app-card>
+    <app-card *ngFor="let card of articles | async" [card]="card"></app-card>
   </div>
 </div>

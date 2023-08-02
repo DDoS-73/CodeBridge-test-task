@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../../models/Card.model';
-import { CardService } from '../../service/card.service';
+import { Article } from '../../../shared/models/Article.model';
+import { ArticleService } from '../../../shared/service/article.service';
 import { map, Observable } from 'rxjs';
 
 @Component({
@@ -9,10 +9,10 @@ import { map, Observable } from 'rxjs';
   styleUrls: ['./cards-container.component.scss']
 })
 export class CardsContainerComponent implements OnInit {
-  cards$: Observable<Card[]> = new Observable<Card[]>();
-  constructor(private cardService: CardService) {}
+  articles: Observable<Article[]> = new Observable<Article[]>();
+  constructor(private cardService: ArticleService) {}
 
   ngOnInit() {
-    this.cards$ = this.cardService.getCards().pipe(map(res => res.results))
+    this.articles = this.cardService.getArticles().pipe(map(res => res.results))
   }
 }

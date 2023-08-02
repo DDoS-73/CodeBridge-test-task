@@ -1,4 +1,4 @@
-export interface Card {
+export interface Article {
   title: string;
   summary: string;
   updated_at: string;
