@@ -10,7 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ShortDescriptionPipe } from './pipe/short-description.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { RouterLink } from '@angular/router';
 
 
 @NgModule({
@@ -30,7 +30,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatGridListModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterLink
   ]
 })
 export class CardsModule { }

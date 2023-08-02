@@ -13,10 +13,9 @@ export class ArticlePageComponent implements OnInit {
   article$!: Observable<Article>;
   constructor(private articleService: ArticleService, private route: ActivatedRoute) {}
   ngOnInit() {
-    this.article$ = this.articleService.getArticleByID(20221);
-    // const id = this.route.snapshot.paramMap.get('id');
-    // if (id) {
-    //   this.article$ = this.articleService.getArticleByID(id);
-    // }
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.article$ = this.articleService.getArticleByID(id);
+    }
   }
 }
