@@ -1,0 +1,5 @@
+<ng-container *ngIf="(article$ | async) as article">
+  <app-article-page-image [imgSrc]="article.image_url"></app-article-page-image>
+  <app-article-page-body [title]="article.title" [description]="article.summary"></app-article-page-body>
+  <app-article-page-back-button></app-article-page-back-button>
+</ng-container>
