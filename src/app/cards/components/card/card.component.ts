@@ -8,5 +8,5 @@ import { Article } from '../../../shared/models/Article.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  @Input() card!: Article;
+  @Input({ required: true }) card!: Article;
 }
