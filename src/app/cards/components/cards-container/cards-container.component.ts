@@ -15,4 +15,8 @@ export class CardsContainerComponent implements OnInit {
   ngOnInit() {
     this.articles = this.cardService.getArticles().pipe(map(res => res.results))
   }
+
+  trackById(index: number, article: Article) {
+    return article.id;
+  }
 }
