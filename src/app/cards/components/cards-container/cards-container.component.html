@@ -1,9 +1,9 @@
 <div class="wrapper">
-  <p class="mat-h3">Result: {{(articles | async)?.length}}</p>
+  <p class="mat-h3">Result: {{(articles$ | async)?.length}}</p>
   <mat-divider></mat-divider>
   <div class="card-container">
     <app-card
-      *ngFor="let article of articles | async; trackBy: trackById"
+      *ngFor="let article of articles$ | async; trackBy: trackById"
       [card]="article"
       [routerLink]="['/articles', article.id]"
     ></app-card>
