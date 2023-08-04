@@ -1,3 +1,14 @@
 .search-field {
-  width: 375px;
+  width: 600px;
+}
+
+:host ::ng-deep .mdc-text-field {
+  border-radius: 5px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.05);
+}
+
+:host ::ng-deep .mdc-line-ripple::before {
+  border: none;
 }

@@ -1,11 +1,11 @@
 <div>
   <h3 class="mat-h3">Filter by keywords</h3>
   <mat-form-field class="search-field">
-    <mat-icon style="padding: 0" matPrefix fontIcon="search"></mat-icon>
+    <mat-icon fontIcon="search" matPrefix style="padding: 0 20px"></mat-icon>
     <input (input)="onInput()"
            [(ngModel)]="searchText"
            matInput
-           placeholder="Text"
+           placeholder="Type your search here..."
            type="text"
     >
   </mat-form-field>
