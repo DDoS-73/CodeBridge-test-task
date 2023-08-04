@@ -8,5 +8,6 @@ import { Article } from '../../../shared/models/Article.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  @Input({ required: true }) card!: Article;
+  @Input({required: true}) card!: Article;
+  @Input() searchText: string | null = '';
 }

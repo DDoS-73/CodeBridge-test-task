@@ -6,6 +6,7 @@
       *ngFor="let article of articles$ | async; trackBy: trackById"
       [card]="article"
       [routerLink]="['/articles', article.id]"
+      [searchText]="searchInput$ | async"
     ></app-card>
   </div>
 </div>

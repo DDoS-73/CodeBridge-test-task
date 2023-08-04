@@ -11,17 +11,19 @@ import { ShortDescriptionPipe } from './pipe/short-description.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterLink } from '@angular/router';
+import { HighlightDirective } from './directive/highlight.directive';
 
 
 @NgModule({
-    declarations: [
-        CardsContainerComponent,
-        CardComponent,
-        ShortDescriptionPipe
-    ],
-    exports: [
-        CardsContainerComponent
-    ],
+  declarations: [
+    CardsContainerComponent,
+    CardComponent,
+    ShortDescriptionPipe,
+    HighlightDirective
+  ],
+  exports: [
+    CardsContainerComponent
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -34,4 +36,5 @@ import { RouterLink } from '@angular/router';
     RouterLink
   ]
 })
-export class CardsModule { }
+export class CardsModule {
+}

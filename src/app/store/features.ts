@@ -1,3 +1,4 @@
 export enum Features {
-  Articles = 'articles'
+  Articles = 'articles',
+  SearchText = 'searchText',
 }

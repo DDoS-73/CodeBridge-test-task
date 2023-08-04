@@ -9,13 +9,14 @@ import { Article } from '../models/Article.model';
 })
 export class ArticleService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  getArticles() {
-    return this.http.get<ArticlesResponse>(URL);
+  getArticles(params?: { [key: string]: string }) {
+    return this.http.get<ArticlesResponse>(URL, {params});
   }
 
   getArticleByID(id: string | number) {
-    return this.http.get<Article>(`${URL}/${id}`)
+    return this.http.get<Article>(`${URL}/${id}`);
   }
 }

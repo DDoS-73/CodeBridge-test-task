@@ -1,4 +1,4 @@
-import { Article } from '../shared/models/Article.model';
+import { Article } from '../../shared/models/Article.model';
 import { createReducer, on } from '@ngrx/store';
 import { successLoadArticles } from './articles.actions';
 
