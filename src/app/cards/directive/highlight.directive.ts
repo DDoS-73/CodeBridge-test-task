@@ -1,15 +1,15 @@
-import { AfterContentInit, Directive, ElementRef, Input } from '@angular/core';
+import { AfterContentChecked, Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
-export class HighlightDirective implements AfterContentInit {
+export class HighlightDirective implements AfterContentChecked {
   @Input('appHighlight') searchText: string | null = '';
 
   constructor(private el: ElementRef<HTMLSpanElement>) {
   }
 
-  ngAfterContentInit() {
+  ngAfterContentChecked() {
     if (this.searchText) {
       console.log(this.searchText);
       const regex =
